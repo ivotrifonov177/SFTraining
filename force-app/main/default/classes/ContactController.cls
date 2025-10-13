@@ -31,4 +31,19 @@ public with sharing class ContactController {
     public static void deleteContact(Id contactId) {
         delete [SELECT Id FROM Contact WHERE Id = :contactId];
     }
+
+    @AuraEnabled(cacheable=true)
+    public static Contact getContact(Id contactId) {
+        return [
+            SELECT Id, FirstName, LastName, Email, Phone
+            FROM Contact
+            WHERE Id = :contactId
+            LIMIT 1
+        ];
+    }
+
+    @AuraEnabled
+    public static void updateContact(Contact c) {
+        update c;
+    }
 }

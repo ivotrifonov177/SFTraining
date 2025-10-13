@@ -1,3 +1,20 @@
 <template>
-    
+    <lightning-card title="Edit Contact"></lightning-card>
+    <template if:true={contact}>
+        <div class="slds-p-around_medium">
+            <lightning-input label="First Name" value={contact.FirstName} data-field="FirstName"
+                onchange={handleChange}></lightning-input>
+            <lightning-input label="Last Name" value={contact.LastName} data-field="FirstName"
+                onchange={handleChange}></lightning-input>
+            <lightning-input label="Email" value={contact.Email} data-field="Email"
+                onchange={handleChange}></lightning-input>
+            <lightning-input label="Phone" value={contact.Phone} data-field="Phone"
+                onchange={handleChange}></lightning-input>
+            <lightning-button class="slds-m-top_medium" label="Save" disabled={isSaveDisabled} onclick={handleSave}></lightning-button>
+        </div>
+    </template>
+
+    <template if:false={contact}>
+        <p class="slds-p-around_medium">Loading contact...</p>
+    </template>
 </template>
