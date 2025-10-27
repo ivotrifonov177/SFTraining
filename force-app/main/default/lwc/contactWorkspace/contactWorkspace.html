@@ -1,0 +1,18 @@
+<template>
+    <lightning-card title="Contact Workspace" icon-name="standard:contact">
+        <div class="slds-p-around_medium">
+            <c-contact-search onsearch={handleSearch}></c-contact-search>
+
+            <div class="slds-grid slds-gutters slds-m-top_medium">
+                <div class="slds-col slds-size_1-of-2">
+                    <c-contact-list search-key={searchKey} onselect={handleSelect}></c-contact-list>
+                </div>
+                <div class="slds-col slds-size_1-of-2">
+                    <c-contact-summary record-id={selectedId}></c-contact-summary>
+                    <c-task-composer record-id={selectedId}></c-task-composer>
+                    <c-task-list record-id={selectedId}></c-task-list>
+                </div>
+            </div>
+        </div>
+    </lightning-card>
+</template>

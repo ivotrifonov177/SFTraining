@@ -1,0 +1,19 @@
+<template>
+    <lightning-card title="Recent Tasks">
+        <div class="slds-p-around_medium">
+            <template if:true={hasRows}>
+                <ul class="slds-has-dividers_around-space">
+                    <template for:each={rows} for:item="t">
+                        <li key={t.Id} class="slds-item">
+                            <strong>{t.Subject}</strong> — {t.Status}
+                            <template if:true={t.ActivityDate}>(Due: {t.ActivityDate})</template>
+                        </li>
+                    </template>
+                </ul>
+            </template>
+            <template if:false={hasRows}>
+                <p>No tasks yet.</p>
+            </template>
+        </div>
+    </lightning-card>
+</template>

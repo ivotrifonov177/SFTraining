@@ -1,0 +1,9 @@
+<template>
+    <lightning-card title="New Task">
+        <div class="slds-p-around-medium">
+            <lightning-input label="Subject" value={subject} data-field="subject" onchange={handleChange}></lightning-input>
+            <lightning-input label="Due Date" type="date" value={date} data-field="date" onchange={handleChange}></lightning-input>
+            <lightning-button class="slds-m-top_small" label="Create Task" onclick={handleCreate} disabled={isDisabled}></lightning-button>
+        </div>
+    </lightning-card>
+</template>

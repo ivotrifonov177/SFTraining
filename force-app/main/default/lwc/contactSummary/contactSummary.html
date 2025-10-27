@@ -1,0 +1,17 @@
+<template>
+    <lightning-card title="Contact Summary">
+        <div class="slds-p-around_medium">
+            <template if:true={contact.data}>
+                <p class="slds-text-heading_small">{name}</p>
+                <p>Email: {email}</p>
+                <p>Phone: {phone}</p>
+                <p>Account: {accountName}</p>
+            </template>
+            <template if:true={contact.error}>
+                <p class="slds-text-color_error">
+                    Failed to load contact.
+                </p>
+            </template>
+        </div>
+    </lightning-card>
+</template>
