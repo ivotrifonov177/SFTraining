@@ -1,0 +1,19 @@
+<template>
+    <article class="slds-card">
+        <header class="slds-card__header slds-grid">
+            <slot name="header">
+                <div class="slds-media__body">
+                    <h2 class="slds-card__header-title">Untitled</h2>
+                </div>
+            </slot>
+        </header>
+
+        <div class="slds-card__body slds-card__body_inner">
+            <slot></slot> <!-- default unnamed slot -->
+        </div>
+
+        <footer class="slds-card__footer">
+            <slot name="footer"></slot>
+        </footer>
+    </article>
+</template>

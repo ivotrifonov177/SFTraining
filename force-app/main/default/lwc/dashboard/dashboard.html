@@ -1,0 +1,53 @@
+<template>
+    <lightning-card title="My Smart Dashboard" icon-name="utility:apps">
+        <div class="slds-grid slds-wrap slds-p-around_medium">
+
+            <!-- Card 1 -->
+            <div class="slds-col slds-size_1-of-3 slds-p-around_small">
+                <c-smart-card>
+                    <h2 slot="header">Recent Contacts</h2>
+                    <ul>
+                        <li>John Doe</li>
+                        <li>Mary Poppins</li>
+                        <li>Bruce Wayne</li>
+                    </ul>
+                    <div slot="footer">
+                        <lightning-button label="View All" variant="brand"></lightning-button>
+                    </div>
+                </c-smart-card>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="slds-col slds-size_1-of-3 slds-p-around_small">
+                <c-smart-card>
+                    <div slot="header" class="slds-grid slds-grid_align-spread">
+                        <h2>Performance</h2>
+                        <lightning-button-icon icon-name="utility:refresh"
+                            alternative-text="refresh"></lightning-button-icon>
+                    </div>
+                    <p class="slds-text-heading_large slds-text-align_center slds-p-around_medium">92%</p>
+                    <div slot="footer" class="slds-text-align_center">Compared to last week</div>
+                </c-smart-card>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="slds-col slds-size_1-of-3 slds-p-around_small">
+                <c-smart-card>
+                    <div slot="header" class="slds-grid slds-grid_align-spread">
+                        <h2>Notes</h2>
+                        <lightning-button-icon icon-name="utility:add" alternative-text="Add"></lightning-button-icon>
+                    </div>
+                    <ul>
+                        <li>Finish LWC training</li>
+                        <li>Deploy new Store Locator</li>
+                        <li>Review Einstein recommendations</li>
+                    </ul>
+                    <div slot="footer" class="slds-text-align_right">
+                        <lightning-button variant="brand-outline" label="Add Note"></lightning-button>
+                    </div>
+                </c-smart-card>
+            </div>
+
+        </div>
+    </lightning-card>
+</template>
