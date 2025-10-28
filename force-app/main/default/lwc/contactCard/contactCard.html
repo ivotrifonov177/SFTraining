@@ -1,0 +1,11 @@
+<template>
+    <template if:true={hasContact}>
+        <p class="slds-text-heading_small">
+            {contact.FirstName} {contact.LastName}
+        </p>
+        <p>{contact.Email}</p>
+    </template>
+    <template if:false={hasContact}>
+        <p>Select a contact.</p>
+    </template>
+</template>
